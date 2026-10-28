@@ -108,8 +108,10 @@ mvn spring-boot:run
 ## 接口响应约定
 
 ```json
-{ "code": 200, "msg": "success", "data": {}, "timestamp": 1761638400000 }
+{ "code": 200, "msg": "success", "data": {}, "timestamp": 1761638400000, "success": true }
 ```
+
+> `success` 是由 `code == 200` 派生的只读字段，前端可直接用它判断，无需硬编码业务码。
 
 | code 段 | 含义 | HTTP 状态码 |
 | --- | --- | --- |
